@@ -1,0 +1,67 @@
+/* اسلوب العرض للعناصر */
+.resume__container {
+    display: grid;
+    grid-template-columns: 1fr; /* عمود واحد للهواتف الجوالة */
+    row-gap: 1.875rem; /* مسافة بين الأعمدة */
+}
+
+/* تنسيق قسم الخبرات */
+.timeline {
+    background: var(--container-color);
+    padding: 1.875rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 1.875rem; /* مسافة بين قسم الخبرات والأقسام الأخرى */
+}
+
+/* تنسيق بطاقات الخبرات */
+.timeline__item {
+    position: relative;
+    padding-left: 3.125rem;
+    padding-bottom: 3.125rem;
+    margin-bottom: 2rem; /* مسافة بين بطاقات الخبرات */
+}
+
+.timeline__item:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0; /* لإزالة المسافة الزائدة بين آخر بطاقة والحاوية */
+}
+
+/* خط الزمن بالشكل المناسب */
+.timeline__item::before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: var(--first-color);
+    position: absolute;
+    left: .25rem;
+    top: 0;
+}
+
+/* أيقونة الخبرة */
+.timeline .icon-briefcase,
+.timeline .icon-graduation {
+    position: absolute;
+    left: -0.4375rem;
+    top: 0;
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    background: var(--container-color);
+    padding: 0.4375rem 0;
+}
+
+.timeline__data {
+    color: #8b88b1;
+    font-size: var(--small-font-size);
+}
+
+/* تنسيق عنوان الخبرة */
+.timeline__title {
+    font-size: var(--h3-font-size);
+    margin: 0.5rem 0;
+}
+
+
+.hr .div {
+    background-color: #8b88b1;
+}

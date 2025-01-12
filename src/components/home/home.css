@@ -1,0 +1,250 @@
+.home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem; /* إضافة padding للمحافظة على النصوص بعيدة عن حواف الشاشة */
+}
+
+.intro {
+    max-width: 540px;
+    text-align: center;
+    z-index: 1;
+    border-bottom: 2px solid rgb(224, 231, 224);
+    border-right: 2px solid rgb(224, 231, 224);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.img {
+    width: 300px;
+    text-align: center;
+    
+}
+
+.img img {
+    width: 200px;
+}
+
+/* الأنماط للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+        justify-content: center; /* يمكنك تغيير هذه القيمة لتحكم بموضع العناصر بشكل أفضل */
+    }
+
+    .intro {
+        margin-bottom: 20px; /* إضافة مسافة بين العناصر */
+    }
+}
+
+
+
+
+.home__img {
+    max-width: 200px; /* تحديد عرض صورتك بحيث تكون مناسبة للشاشات الصغيرة */
+    margin-bottom: 1rem; /* تقليل المسافة بين الصورة والنص */
+}
+
+.home__name {
+    font-size: 2rem; /* تكبير حجم الاسم على الشاشات الصغيرة */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.home__socials {
+    display: flex;
+    justify-content: center; /* محاذاة روابط التواصل بالوسط على الشاشات الصغيرة */
+    margin: 0.2rem 0;
+}
+
+.home__social-link {
+    color: #000; /* لون الروابط */
+    font-size: 1.3rem;
+    margin: 0 0.5rem; /* تقليل المسافة بين الروابط */
+    transition: .3s;
+}
+
+.home__social-link:hover {
+    color: hsl(43, 100%, 68%);
+}
+
+.scroll__down {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+    width: 100%;
+    display: none; /* إخفاء زر التمرير على الشاشات الصغيرة */
+}
+
+.shapes {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.shape {
+    position: absolute;
+}
+
+.s1 {
+    left: 2%;
+    top: 10%;
+}
+
+.s2 {
+    left: 18%;
+    top: 30%;
+}
+
+.s3 {
+    left: 5%;
+    bottom: 30%;
+}
+
+.s4 {
+    left: 2%;
+    bottom: 10%;
+}
+
+.s5 {
+    left: 44%;
+    top: 10%;
+}
+
+.s6 {
+    left: 36%;
+    bottom: 20%;
+}
+
+.s7 {
+    top: 20%;
+    right: 25%;
+}
+
+.s8 {
+    right: 24%;
+    bottom: 20%;
+}
+
+.s9 {
+    right: 2%;
+    top: 10%;
+}
+
+.s10 {
+    top: 45%;
+    right: 1%;
+}
+
+.s11 {
+    bottom: 10%;
+    right: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+    .home {
+        padding: 2rem; /* إضافة padding للمحافظة على النصوص بعيدة عن حواف الشاشة */
+
+    }
+    
+
+    .intro {
+        max-width: 100%; /* جعل النص يمتد على كامل الشاشة */
+    }
+
+    .home__img {
+        max-width: 200px; /* تحديد عرض صورتك بحيث تكون مناسبة للشاشات الصغيرة */
+        margin-bottom: 1rem; /* تقليل المسافة بين الصورة والنص */
+    }
+
+    .home__name {
+        font-size: 2rem; /* تكبير حجم الاسم على الشاشات الصغيرة */
+        margin-bottom: 0.5rem;
+    }
+
+    .home__socials {
+        justify-content: center; /* محاذاة روابط التواصل بالوسط على الشاشات الصغيرة */
+        margin-bottom: 1rem; /* زيادة المسافة بين الروابط */
+    }
+
+    .scroll__down {
+        display: none; /* إخفاء زر التمرير على الشاشات الصغيرة */
+    }
+}
+
+
+.home__social-link {
+    color: #918989; /* لون الروابط */
+    font-size: 1.3rem;
+    margin: 0 0.5rem; /* تقليل المسافة بين الروابط */
+    transition: .3s;
+}
+
+.home__social-link:hover {
+    color: hsl(43, 100%, 68%);
+}
+
+.scroll__down {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+    width: 100%;
+    display: block; /* إظهار زر التمرير مرة أخرى */
+}
+
+.mouse {
+    border: 2px solid #454360;
+    display: block;
+    height: 1.6rem;
+    width: 1.25rem;
+    margin: auto;
+    margin-top: .75rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+@keyframes ani-mouse {
+    0% {
+        top: 29%;
+    }
+
+    15% {
+        top: 50%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 29%;
+    }
+}
+
+.wheel {
+    background: var(--title-color);
+    border-radius: 100%;
+    width: 0.25rem;
+    height: 0.25rem;
+    position: absolute;
+    top: .5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: ani-mouse 2s linear infinite;
+}
+
+.shapes {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.shape {
+    position: absolute;
+}
